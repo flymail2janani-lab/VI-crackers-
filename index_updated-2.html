@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sivakasi Crackers - Quick Enquiry</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#fff8f0;color:#222}
+header{background:#b5121b;color:white;text-align:center;padding:28px 16px}
+header h1{margin:0 0 8px;font-size:30px}header p{margin:0}
+.container{max-width:900px;margin:28px auto;padding:0 18px}
+.card{background:white;border-radius:14px;padding:24px;box-shadow:0 4px 18px #00000015;margin-bottom:20px}
+h2{color:#b5121b;margin-top:0}.price{font-size:24px;font-weight:bold;color:#08783e}
+label{display:block;margin:14px 0 6px;font-weight:bold}
+input,textarea,select{width:100%;padding:12px;border:1px solid #ccc;border-radius:8px;font-size:16px}
+button{margin-top:18px;width:100%;padding:14px;border:0;border-radius:8px;background:#b5121b;color:white;font-size:17px;font-weight:bold;cursor:pointer}
+button:hover{opacity:.9}.whatsapp{background:#168b45;text-decoration:none;display:block;text-align:center;padding:14px;border-radius:8px;color:#fff;font-weight:bold;margin-top:12px}
+.small{font-size:13px;color:#666}.footer{text-align:center;padding:25px;color:#666}
+</style>
+</head>
+<body>
+<header>
+  <h1>Sivakasi Sendhurvelan Crackers</h1>
+  <p>Quick Enquiry & Order</p>
+</header>
+
+<div class="container">
+  <div class="card">
+    <h2>Special Offer</h2>
+    <p>Crackers available at attractive prices.</p>
+    <p>Offer Price: <span class="price">₹10,000</span></p>
+    <p class="small">You can change this figure anytime in the website code.</p>
+  </div>
+
+  <div class="card">
+    <h2>Quick Enquiry</h2>
+    <form id="enquiryForm">
+      <label>Name</label>
+      <input id="name" required placeholder="Enter your name">
+
+      <label>Mobile Number</label>
+      <input id="phone" required type="tel" placeholder="Enter mobile number">
+
+      <label>Requirement</label>
+      <select id="requirement">
+        <option>Crackers Enquiry</option>
+        <option>Price List</option>
+        <option>Bulk Order</option>
+        <option>Delivery Enquiry</option>
+      </select>
+
+      <label>Message</label>
+      <textarea id="message" rows="4" placeholder="Enter your requirement"></textarea>
+
+      <button type="submit">Send Enquiry on WhatsApp</button>
+    </form>
+  </div>
+
+  <div class="card">
+    <h2>Contact Us</h2>
+    <p>For orders and enquiries, contact us on WhatsApp.</p>
+    <a class="whatsapp" href="https://wa.me/916364378333" target="_blank">WhatsApp Us</a>
+  </div>
+</div>
+
+<div class="footer">© 2026 Sivakasi Sendhurvelan Crackers</div>
+
+<script>
+document.getElementById('enquiryForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const name=document.getElementById('name').value;
+  const phone=document.getElementById('phone').value;
+  const req=document.getElementById('requirement').value;
+  const msg=document.getElementById('message').value;
+  const text=`Crackers Enquiry%0AName: ${encodeURIComponent(name)}%0AMobile: ${encodeURIComponent(phone)}%0ARequirement: ${encodeURIComponent(req)}%0AMessage: ${encodeURIComponent(msg)}`;
+  window.open('https://wa.me/916364378333?text='+text,'_blank');
+});
+</script>
+</body>
+</html>
